@@ -1,9 +1,0 @@
-# Railway build configuration using Nixpacks
-[phases.setup]
-nixPkgs = ["python310", "ffmpeg"]
-
-[phases.install]
-cmds = ["pip install -r requirements.txt"]
-
-[start]
-cmd = "uvicorn main:app --host 0.0.0.0 --port $PORT --workers 2"
